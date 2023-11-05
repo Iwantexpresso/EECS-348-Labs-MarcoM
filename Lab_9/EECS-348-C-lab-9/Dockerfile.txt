@@ -1,0 +1,8 @@
+# Set the base image to use
+FROM gcc:latest
+# Copy the C program into the container
+COPY  Problem1.C .
+# Compile the C program
+RUN gcc -o Problem1 Problem1.C
+# Set the command to run when the container starts
+CMD ["./Problem1"]
